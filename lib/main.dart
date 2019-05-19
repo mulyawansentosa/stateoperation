@@ -18,7 +18,7 @@ class _RouteAppState extends State<RouteApp>{
       routes: {
         '/': (context) => Dashboard(),
         '/login': (context) => Login(),
-        'profile': (context) => Profile()
+        '/profile': (context) => Profile()
       },
     );
   }

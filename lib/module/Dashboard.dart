@@ -15,7 +15,19 @@ class _DashboardState extends State<Dashboard> {
           title: Text('Dashboard'),
         ),
         body: Container(
-          child: Text('Halaman Dashboard'),
+          child: Column(
+            children: <Widget>[
+              TextField(
+                
+              ),
+              RaisedButton(
+                child: Text('Kirim Data'),
+                onPressed: (){
+                  
+                },
+              ),
+            ],
+          )
         ),
       );
   }

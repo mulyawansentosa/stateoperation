@@ -20,8 +20,8 @@ class _DrawerMenuState extends State<DrawerMenu> {
           title: Text('Dashboard'),
           onTap: () {
             setState(() {
-              Navigator.of(context).pushNamed('/');
               Navigator.pop(context);
+              Navigator.of(context).pushNamed('/');
             });
           },
         ),
@@ -29,20 +29,16 @@ class _DrawerMenuState extends State<DrawerMenu> {
           leading: FlutterLogo(size: 20),
           title: Text('Login'),
           onTap: () {
-            setState(() {
-              Navigator.of(context).pushNamed('/login');
-              Navigator.pop(context);
-            });
+            Navigator.pop(context);
+            Navigator.of(context).pushNamed('/login');
           },
         ),
         ListTile(
           leading: FlutterLogo(size: 20),
           title: Text('Profile'),
           onTap: () {
-            setState(() {
-              Navigator.of(context).pushNamed('/profile');
-              Navigator.pop(context);
-            });
+            Navigator.pop(context);
+            Navigator.of(context).pushNamed('/profile');
           },
         ),
       ],
