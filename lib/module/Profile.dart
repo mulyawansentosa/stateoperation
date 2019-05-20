@@ -6,13 +6,13 @@ class Profile extends StatefulWidget{
   final Model models;
   Profile({Key key, @required this.models}) : super(key: key);
   @override
-  _ProfileState createState() => _ProfileState(models.judul);  
+  _ProfileState createState() => _ProfileState(data: models);
 }
 
 class _ProfileState extends State<Profile>{
-  final String judul;
+  final Model data;
+  _ProfileState({Key key, @required this.data});
 
-  _ProfileState(this.judul);
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class _ProfileState extends State<Profile>{
           title: Text('Profile'),
         ),
         body: Container(
-          child: Text(this.judul),
+          child: Text(data.judul),
         ),
       );
   }

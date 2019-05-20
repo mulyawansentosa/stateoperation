@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:route/module/Model.dart' as prefix0;
 import './DrawerMenu.dart';
 import './Model.dart';
+import './Profile.dart';
 
 class Dashboard extends StatefulWidget {
-  final Model models;
-  Dashboard({Key key, @required this.models}) : super(key: key);
   @override
   _DashboardState createState() => _DashboardState();
 }
@@ -36,8 +34,10 @@ class _DashboardState extends State<Dashboard> {
               RaisedButton(
                 child: Text('Kirim Data'),
                 onPressed: (){
-                  Model(TxtJudul.text, TxtDeskripsi.text, TxtData.text);
-                  Navigator.of(context).pushNamed('/profile');
+                  var isi = Model(TxtJudul.text, TxtDeskripsi.text, TxtData.text);
+                  Navigator.push(context, 
+                  MaterialPageRoute(builder: (context) => Profile(models: isi))
+                  );
                 },
               ),
             ],
